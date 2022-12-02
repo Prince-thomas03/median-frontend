@@ -31,13 +31,20 @@ const Chat = () => {
   
 
   useEffect(() => {
-    socket.current = io("https://neos.tk/socket.io/");
+    socket.current = io("ws://neos.tk/ws/");
     socket.current.emit("new-user-add", user._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
      
     });
-  }, [user]);
+
+
+
+
+  }, [user]
+  
+  
+  );
 
 
   useEffect(() => {
