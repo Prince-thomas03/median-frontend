@@ -2,7 +2,7 @@
 
 const io = require("socket.io")(8800, {
   cors: {
-    origin: "*",
+    origin: "https://neos.tk",
   },
 });
 
